@@ -1,5 +1,7 @@
-import {bigButton} from './gzgHtmlElements/buttonBig.js'
-import {miniButton} from './gzgHtmlElements/buttonSmall.js'
+import {compiler} from './compiler/compiler.js'
 
-customElements.define("gzg-button-b", bigButton)
-customElements.define("gzg-button-m", miniButton)
+compiler.subscribe(
+    (x) => {
+        console.log(x)
+    }
+)

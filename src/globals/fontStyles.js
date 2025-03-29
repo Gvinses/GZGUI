@@ -10,5 +10,6 @@ export function setFontStyles(HTML, nameOfElement) {
         </style>
         ${currentHTML}
     `
+
     return HTML.innerHTML
 }
