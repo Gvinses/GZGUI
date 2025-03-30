@@ -1,4 +1,6 @@
-import {setFontStyles} from '../globals/fontStyles.js'
+import {setTagStyles} from '../globals/tagStyles.js'
+
+let selector_name = 'button-m'
 
 export class miniButton extends HTMLElement {
     constructor() {
@@ -6,6 +8,7 @@ export class miniButton extends HTMLElement {
 
         let text = ''
         this.innerText = text
+        this.gzgName = 'gzg-' + selector_name
     }
 
     connectedCallback() {
@@ -17,28 +20,23 @@ export class miniButton extends HTMLElement {
     }
 
     setStyles() {
-        this.currentHTML = this.innerHTML
-        this.innerHTML = `
-            <style>
-                gzg-button-m {
-                    background: rgb(188, 188, 188);
-                    opacity: 0.9;
-                    border: none;
-                    border-radius: 25px;
+        let css = `
+            background: rgb(188, 188, 188);
+            opacity: 0.9;
+            border: none;
+            border-radius: 25px;
                 
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
                     
-                    min-width: 155px;
-                    min-height: 50px;
-                    width: max-content;
+            min-width: 155px;
+            min-height: 50px;
+            width: max-content;
                     
-                    font-size: large;
-                }
-            </style>
-            ${this.currentHTML}
+            font-size: large;
         `
-        this.innerHTML = setFontStyles(this, 'gzg-button-m')
+
+        this.innerHTML = setTagStyles(this, this.gzgName, css)
     }
 }

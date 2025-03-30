@@ -1,20 +1,18 @@
-import {setTagStyles} from '../globals/tagStyles.js'
+import {setTagStyles} from "../globals/tagStyles.js";
 
-let selector_name = 'button-b'
+let selector_name = 'input-a'
 
-export class bigButton extends HTMLElement {
+export class inputA extends HTMLElement {
     constructor() {
         super();
 
-        let text = ''
-        this.innerText = text
+        this.value = ''
         this.gzgName = 'gzg-' + selector_name
     }
 
     connectedCallback() {
-        if (this.hasAttribute('text')) {
-            this.text = this.getAttribute('text')
-            this.innerText = this.text
+        if (this.hasAttribute('value')) {
+            this.value = this.getAttribute('value')
         }
         this.setStyles()
     }
@@ -30,11 +28,9 @@ export class bigButton extends HTMLElement {
             justify-content: center;
             align-items: center;
                     
-            min-width: 350px;
-            min-height: 100px;
-            width: max-content;
-                    
-            font-size: large;
+            padding: 10px;
+            width: 300px;
+            height: 50px;   
         `
 
         this.innerHTML = setTagStyles(this, this.gzgName, css)
