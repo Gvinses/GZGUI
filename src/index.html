@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
     <script src="main.js" type="module"></script>
 </head>
 <body>
 
-    <gzg-button-b text="Hello, world!"></gzg-button-b>
-    <gzg-button-m text="Smaller!"></gzg-button-m>
-    <gzg-input-a value="qweqwe"></gzg-input-a>
+
+<gzg-button-b text="Hello, world!"></gzg-button-b>
+<gzg-button-m text="Smaller!"></gzg-button-m>
+<gzg-input-a class="qwe" value="qweqwe"></gzg-input-a>
+<gzg-input-b class="qwe2" value="qweqwe" icon="icons/158508670.png"></gzg-input-b>
 
 
 <script>
-    a = document.querySelector('gzg-button-m');
+    a = document.querySelector('gzg-input-b');
+    a.addEventListener('input', function (e) {
+        console.log(e)
+    })
     a.addEventListener('click', function (e) {
         console.log(e)
     })

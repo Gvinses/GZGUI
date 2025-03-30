@@ -1,4 +1,4 @@
-import {setTagStyles} from '../globals/tagStyles.js'
+import {setTagStyles} from '../../globals/tagStyles.js'
 
 let selector_name = 'button-b'
 
