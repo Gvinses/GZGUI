@@ -1,4 +1,4 @@
-import {setFontStyles} from "./fontStyles.js";
+import {setFontStyles} from "./fontStyles.js" 
 
 export function setTagStyles(HTML, gzgName, styles) {
     let currentHTML = HTML.innerHTML
